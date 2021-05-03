@@ -1,18 +1,25 @@
-<h1> Hello World!!</h1>
+{%  extends 'base.html' %}
 
-<p>This is my first attempt at a web page!!!</p>
 
-<h1> Pretty Cool!!</h1>
+{% block content %}
 
-<h3>My favorite colors are: </h3>
+	<h1> Hello World!!</h1>
 
-{% for color in favorite_colors%}
+	<p>This is my first attempt at a web page!!!</p>
 
-{{ color  }} </br>
+	<h1> Pretty Cool!!</h1>
 
-{% endfor%}
+	<h3>My favorite colors are: </h3>
 
-</br></br>
+	{% for color in favorite_colors%}
 
-The 2nd item is {{favorite_colors.1}}
+	{{ color  }} </br>
+
+	{% endfor%}
+
+	</br></br>
+
+	The 2nd item is {{favorite_colors.1}}
+
+{% endblock %}
 

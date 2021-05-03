@@ -1,1 +1,12 @@
-<h1> Hello {{user_name|capitalize}}  </h1>
+{%  extends 'base.html' %}
+
+
+{% block content %}
+
+	<h1> Hello - h1 {{user_name|capitalize}}  </h1> <br/><br/>
+	<h2> Hello - h2 {{user_name|capitalize}}  </h2> <br/><br/>
+	<h3> Hello - h3 {{user_name|capitalize}}  </h3> <br/><br/>
+	<h4> Hello - h4 {{user_name|capitalize}}  </h4> <br/><br/>
+	<h5> Hello - h5 {{user_name|capitalize}}  </h5> <br/><br/>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{%  extends 'base.html' %}
+
+{% block content %}
+
+
+
+	{% for message in get_flashed_messages() %}
+
+		<div class="alert alert-warning alert-dismissible fade show" role="alert">
+		  <strong> {{message}} </strong>
+		  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+
+
+	{% endfor%}
+	
+	{% if name %}  	<! If name is provided, simply say HI to the person >
+
+		<h1>Hi,  {{name}} </h1>
+
+		<br/>
+
+	
+
+	{% else %}		<! Otherwise, ask name and display form for name entry >
+
+		<h1></h1>
+
+		<br/>
+
+		<form method = "POST">
+
+				{{ form.hidden_tag() }}
+
+				{{ form.name.label (class="form-label") }}
+
+				{{ form.name(class="form-control") }}
+
+				<br/>
+				<br/>
+
+				{{form.submit(class="btn btn-secondary")}} 
+
+		</form>
+
+	{% endif %}
+
+{% endblock  %}
